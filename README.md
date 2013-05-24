@@ -12,4 +12,4 @@ Navegadores soportados:
 Copyright 2013 Alfonso Saavedra "Son Link" <sonlink.dourden@gmail.com>.
 Juego bajo licencia GPLv3.
 
-https://github.com/son-link/Megatrivia.
+https://github.com/son-link/MegaTrivia.
