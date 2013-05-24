@@ -1,0 +1,32 @@
+{
+	"preguntas":[
+		{
+			"titulo":"¿En que año fue lanzada en Japón la Famicom?", "respuestas": ["1983", "1981", "1985", "1989"]
+		},
+		{
+			"titulo":"¿Cual fue el nombre original de Súper Mario?", "respuestas": ["Jumpman", "Link", "Wario", "Siempre fue su nombre"]
+		},
+		{
+			"titulo":"En 1986 Nintendo lanzo al mercado los primeros juegos de dos de sus grandes franquicias ¿cuales fueron?",
+			"respuestas": ["Legend of Zelda y Metroid", "Legend of Zelda y Super Mario Bros.", "Super Mario Bros y Metroid", "Super Mario Bros. y Donkey Kong"]
+		},
+		{
+			"titulo":"¿En que juego de la saga The legend of Zelda apareció por primera vez una Ocarina?", "respuestas": ["A Link to the past", "Link's Awakeining'", "Ocarina of Time", "Ledend of Zelda"]
+		},
+		{
+			"titulo":"¿A que consola se le conoció como El cerebro de la Bestia?", "respuestas": ["Super Nintendo", "NES", "Nintendo 64", "Gameboy"]
+		},
+		{
+			"titulo":"¿Cual fue el nombre original de Súper Mario?", "respuestas": ["Jumpman", "Link", "Wario", "Siempre fue su nombre"]
+		},
+		{
+			"titulo":"¿En que año fue lanzada en Europa la primera Gameboy?", "respuestas": ["1990", "1989", "1991", "1986"]
+		},
+		{
+			"titulo":"¿En que año se fundo Nintendo?", "respuestas": ["1889", "1981", "1977", "1983"]
+		},
+		{
+			"titulo":"¿Cual fue el primer videojuego creado por Shigeru Miyamoto?", "respuestas": ["Donke Kong", "Mario Bros", "Super Mario bros.", "Legend of Zelda"]
+		}
+	]
+}

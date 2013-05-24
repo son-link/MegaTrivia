@@ -1,0 +1,112 @@
+{
+	"preguntas":[
+		{
+			"titulo":"¿Que grupo no se podía levantar en 1981?", "respuestas": ["Mecano", "Hombres G", "Alaska y los pegamoides", "Queen"]
+		},
+		{
+			"titulo":"¿Cual es el planeta natal de Alf?", "respuestas": ["Belmak", "Tatooine", "Tierra", "Marte"]
+		},
+		{
+			"titulo":"Completa la frase: Luke, ...", "respuestas": ["yo soy tu padre", "prepárate para morir", "coge mi mano", "soy tu tío"]
+		},
+		{
+			"titulo":"¿En que país se celebro el Mundial de Fútbol de 1982?",  "respuestas": ["España", "Estados Unidos", "México", "Francia"]
+		},
+		{
+			"titulo":"En 1981 salio una recreativa donde vimos por primera vez a dos iconos de Nintendo ¿Quieres eran?",
+			"respuestas": ["Donkey Kong y Mario", "Link y Zelda", "Sonic y Tails", "Mario y Luigi"]
+		},
+		{
+			"titulo":"En la serie V ¿Que es lo que vimos comer a ver a Anna, la mala de la serie?", "respuestas": ["Rata", "Gato", "Serpiente", "Conejo"]
+		},
+		{
+			"titulo":"¿En que fecha fue el fallido intento de Golpe de Estado por parte del teniente coronel de la Guardia Civil Antonio Tejero?",
+			"respuestas": ["23 de Febrero de 1981", "30 de Junio de 1981", "27 de Noviembre de 1982", "6 de Diciembre de 1983"]
+		},
+		{
+			"titulo":"¿Que muro fue tirado abajo por los ciudadanos la noche del 9 de noviembre de 1989 al viernes, 10 de noviembre de 1989?",
+			"respuestas": ["Muro de Berlín", "Muro de las Lamentaciones", "Gran muralla china", "Muro de Adriano"]
+		},
+		{
+			"titulo":"¿Entre que se iba a retorcer el pijo de la canción Devuélveme a mi chica de Hombres G?", "respuestas": ["Polvos pica pica", "Barro", "Harina", "Dolor"]
+		},
+		{
+			"titulo":"¿Quien interpreta al arqueólogo Indiana Jones en las películas del mismo nombre?", "respuestas": ["Harrison Ford", "Sean Conery", "Christopher Lambert", "Mark Hamill"]
+		},
+		{
+			"titulo":"¿En que película aparece el entrañable Gizmo?", "respuestas": ["Gremlins", "Critters", "E.T", "Cazafantasmas"]
+		},
+		{
+			"titulo":"¿Que famoso juego de rol fue llevado a una serie de dibujos animados?", "respuestas": ["Dragones y Mazmorras", "Heroquest", "Rolmaster", "Paranoia"]
+		},
+		{
+			"titulo":"Completa la frase: Por el poder de Grayskull ...", "respuestas": ["¡Yo tengo el poder!", "me convierto en He-Man", "Onda vital, ¡Ya!", "3 puntos colega"]
+		},
+		{
+			"titulo":"¿Con que sobrenombre se conocía a Margaret Thatcher, la Primera Ministra de Reino Unido?", "respuestas": ["Dama de Hierro", "Dama de Hielo", "Lady Di", "Lady Mar"]
+		},
+		{
+			"titulo":"¿De que grupo musical formo parte Marta Sanchez?", "respuestas": ["Ole Ole", "Mecano", "Parchís", "Nunca estuvo en un grupo"]
+		},
+		{
+			"titulo":"Sigue la canción: Vamos a cantar, tus problemas déjalos, para disfrutar ...", "respuestas": ["ven a Fraggel Rock", "ven a Barrio Sesamo", "canta con nosotros", "juega con tus amigos"]
+		},
+		{
+			"titulo":"¿Que actor interpreto al Joker en la película de Batman de 1989?", "respuestas": ["Jack Nicholson", "Tim Burton", "Michael Keaton", "Heath Ledger"]
+		},
+		{
+			"titulo":"¿Como se llaman las conocidas maquinitas de pantalla de cristal liquido (LCD) que empezó a fabricar Nintendo en 1981?", "respuestas": ["Game & Watch", "Gameboy", "Game Gear", "Portable Game"]
+		},
+		{
+			"titulo":"¿Cual de estas técnicas usa Son Goku (Bola de Dragón)?", "respuestas": ["Onda vital", "Haduken", "Super tiro rosita", "Impact trueno"]
+		},
+		{
+			"titulo":"¿Que grupo se dio a conocer con la canción Runaway?", "respuestas": ["Bon Jovi", "Europe", "Queen", "New kids on the block"]
+		},
+		{
+			"titulo":"¿Que policía era mitad humano, mitad maquina?", "respuestas": ["Robocop", "Terminator", "Mazinger Z", "Axel Fox"]
+		},
+		{
+			"titulo":"¿Cual es la profesión de los hermanos Mario (Super Mario Bros.)?", "respuestas": ["Fontaneros", "Albañiles", "Poceros", "Electricistas"]
+		},
+		{
+			"titulo":"¿En que película solo podía quedar uno?", "respuestas": ["Los Inmortales", "Terminator", "Willow", "Tortugas Ninja"]
+		},
+		{
+			"titulo":"¿Que grupo cantaba The final countdown?", "respuestas": ["Europe", "Queen", "Bon Jovi", "KISS"]
+		},
+		{
+			"titulo":"¿Como se llama la bruja de los Electroduendes?", "respuestas": ["Averia", "Lola", "Alaska", "Aramis"]
+		},
+		{
+			"titulo":"¿Quien nos mandaba a la cama a ritmo de rock?", "respuestas": ["Casimiro", "Garfield", "La familia Telerín", "Barón rojo"]
+		},
+		{
+			"titulo":"¿Cual era la profesión del Superheroe Americano?", "respuestas": ["Profesor", "Agente del FBI", "Policía", "Director de un instituto"]
+		},
+		{
+			"titulo":"¿Que actor interpreta a John McClane en La jungla de cristal (Die Hard)?", "respuestas": ["Bruce Willis", "Chuck Norris", "Eddie Murphy", "Sylvester Stallone"]
+		},
+		{
+			"titulo":"¿Que partido gano la elecciones de 1982 en España?", "respuestas": ["PSOE", "Alianza Popular", "PCE", "UCD"]
+		},
+		{
+			"titulo":"El 26 de Abril de 1986 se produjo la mayor catástrofe nuclear en ...", "respuestas": ["Chernobil", "Hiroshima", "Nagashaki", "Moscu"]
+		},
+		{
+			"titulo":"El 4 de Junio de 1989 se produce en China la matanza en la plaza de Tiananmenn ¿Quienes eran los protestantes?", "respuestas": ["Estudiantes", "Políticos", "Profesores", "Militares"]
+		},
+		{
+			"titulo":"¿En que año fue liberado Nelson Mandela de prisión tras 27 años?", "respuestas": ["1990", "1980", "1981", "1988"]
+		},
+		{
+			"titulo":"¿Que le brillaba a Transfer, el enemigo de Willy Fog en La Vuela al Mundo de Willy Fog?", "respuestas": ["Ojo izquierdo", "Ojo Derecho", "Dientes", "Nada"]
+		},
+		{
+			"titulo":"¿Cual es el nombre del coche de los Cazafantasmas?", "respuestas": ["Ecto 1", "Casper", "Ghost", "Gozer"]
+		},
+		{
+			"titulo":"¿En que año se puso a la venta el famoso micro ordenador ZX Spectrum?", "respuestas": ["1981", "1982", "1985", "1989"]
+		}
+	]
+}
