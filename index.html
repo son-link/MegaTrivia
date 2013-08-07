@@ -16,21 +16,8 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/magic-bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<style>
-		body {
-			text-align: center;
-		}
-		#contenedor {
-			-webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-			-moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-			box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-			filter:progid:DXImageTransform.Microsoft.Blur(pixelradius=10);
-			-ms-filter:"progid:DXImageTransform.Microsoft.Blur(pixelradius=10)"
-		}
-	</style>
 	<script type="text/javascript">
 	// Para poder formatear variables mas facilmente
 	//first, checks if it isn't implemented yet
@@ -46,85 +33,116 @@
 	  };
 	}
 	</script>
+	<style>
+		#game {
+			margin: 0 auto !important;
+			float:none;
+		}
+
+		#footer {
+			position: absolute; bottom: 0; left:0px; margin: 0 auto; width: 100%;
+		}
+		#puntuacionesmaximas .row{
+			float:none;
+			display: table-cell !important;
+			height: 100%;
+			vertical-align: middle !important;
+		}
+	</style>
 </head>
 
 <body>
-	<div class="container span6" id="contenedor">
-		<h1>MegaTrivia</h1>
-		<div id="game">
-			<div class="btn-group btn-group-vertical">
-				<a href="#" class="btn btn-large btn-primary" id="jugar">Jugar</a>
-				<a href="#" class="btn btn-large btn-info" id="puntuaciones">Puntuaciones</a>
-				<a href="#myModal" role="button" class="btn btn-large btn-info" data-toggle="modal">Sobre ...</a>
+	<div id="contenedor" class="container">
+		<div class="row">
+			<div class="text-center">
+				<h1>MegaTrivia</h1>
+				<div id="game" style="margin-top: 10px !important">
+					<div class="btn-group btn-group-vertical">
+						<a class="btn btn-large btn-success" id="jugar">Jugar</a>
+						<a class="btn btn-large btn-info" id="puntuaciones">Puntuaciones</a>
+						<a href="#myModal" class="btn btn-large btn-info" data-toggle="modal">Sobre ...</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="footer" class="span6">MegaTrivia &copy; 2013 Alfonso Saavedra "Son Link"</div>
-
-	</div>
-	<!-- Información sobre MegaTrivia -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>MegaTrivia r1</h3>
+		<div id="footer" class="text-center">MegaTrivia &copy; 2013 Alfonso Saavedra "Son Link"</div>
+		<!-- Información sobre MegaTrivia -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>MegaTrivia r1</h3>
+			</div>
+			<div class="modal-body">
+				<p>MegaTrivia es un juego tipo trivial donde podrás escoger entre distintos trivials.<br/ >
+				De momento solo hay uno disponible, pero en futuras releases habrá mas y podrás mandar el tuyo.</p>
+				<a href="https://github.com/son-link/MegaTrivia" class="btn">Pagina del proyecto</a>
+				<p>MegaTrivia &copy; 2013 Alfonso Saavedra "Son Link". Bajo licencia GPLv3</p>
+				</div>
+			</div>
 		</div>
-		<div class="modal-body">
-			<p>MegaTrivia es un juego tipo trivial donde podrás escoger entre distintos trivials.<br/ >
-			De momento solo hay uno disponible, pero en futuras releases habrá mas y podrás mandar el tuyo.</p>
-			<a href="https://github.com/son-link/MegaTrivia" class="btn">Pagina del proyecto</a>
-			<p>MegaTrivia &copy; 2013 Alfonso Saavedra "Son Link". Bajo licencia GPLv3</p>
+		<!-- Selección de uno de los trivials -->
+		<div id="trivials" class="modal hide fade text-center" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Seleccione un trivial</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div id="trivia_selection" class="btn-group btn-group-vertical span3"></div>
+					<div id="descripcion" class="span2 text-left"></div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<!-- Si el jugador falla 3 preguntas o se terminan todas se muestra la cantidad de aciertos y fallos -->
-	<div id="gameover" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>GAME OVER</h3>
+		<!-- Puntuaciones máximas -->
+		<div id="puntuacionesmaximas" class="modal hide fade text-center" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Puntuaciones máximas</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div id="maximas" class="span4 offset1">
+						<ul class="nav nav-pills nav-stacked text-left"></ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="modal-body">
-			Usted a acertado <span id="acertadas"></span> pregunta(s) y a fallado <span id="falladas"></span>.
+		<!-- Si el jugador falla 3 preguntas o se terminan todas se muestra la cantidad de aciertos y fallos -->
+		<div id="gameover" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>GAME OVER</h3>
+			</div>
+			<div class="modal-body">
+				Usted a acertado <span id="acertadas"></span> pregunta(s) y a fallado <span id="falladas"></span>.
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+			</div>
 		</div>
-		<div class="modal-footer">
-			<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">OK</button>
+		<!-- Información del trivial seleccionado y confirmación de jugar -->
+		<div id="triviainfo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3></h3>
+			</div>
+			<div class="modal-body"></div>
+			 <div class="modal-footer"></div>
 		</div>
-	</div>
-	<!-- Información del trivial seleccionado y confirmación de jugar -->
-	<div id="triviainfo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3></h3>
-		</div>
-		<div class="modal-body"></div>
-		 <div class="modal-footer"></div>
 	</div>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$(window).resize(function(){
-			// aquí le pasamos la clase o id de nuestro div a centrar (en este caso "caja")
-				$('#contenedor').css({
-					position:'absolute',
-					left: ($(window).width() - $('#contenedor').outerWidth())/2,
-					top: ($(window).height() - $('#contenedor').outerHeight())/2
-				});
-
-			});
-
-			// Ejecutamos la función
-			$(window).resize();
-		});
 		function showtrivials(data){
-			$('#game').empty();
-			$('#game').append('<h4>Seleccione uno los los trivials</h4><div class="row"></div>');
+			$('#trivia_selection').empty();
 			$.each(data.trivials, function(indice,valor) {
-				button = '<a href="#" class="btn selecttrivia span2" data-title="{0}" data-content="{1}" data-file="{2}">{0}</a>'.format(valor['name'], valor['desc'], valor['file'])
-				$('#game .row').append(button);
+				button = '<a href="#" class="btn btn-primary span2" data-title="{0}" data-content="{1}" data-file="{2}">{0}</a>'.format(valor['name'], valor['desc'], valor['file'])
+				$('#trivia_selection').append(button);
 			});
+			$('#trivials').modal();
 		}
-		$("#game").delegate('.selecttrivia', 'click', function() {
-			$('#triviainfo h3').text($(this).attr('data-title'));
-			$('#triviainfo .modal-body').text($(this).attr('data-content'));
-			$('#triviainfo .modal-footer').empty();
-			$('#triviainfo .modal-footer').append('<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true" data-name="{0}"data-trivia="{1}">Jugar</button>'.format($(this).attr('data-title'), $(this).attr('data-file')));
-			$('#triviainfo').modal();
+		$("#trivia_selection").delegate('a', 'click', function() {
+			$('#descripcion').empty();
+			$('#descripcion').text($(this).attr('data-content'));
+			$('#descripcion').append('<br /><a data-dismiss="modal" aria-hidden="true" data-name="{0}"data-trivia="{1}"><i class="icon-chevron-right"></i> Jugar</a>'.format($(this).attr('data-title'), $(this).attr('data-file')));
 		});
 		$("#jugar").click(function() {
 			$.ajax({
