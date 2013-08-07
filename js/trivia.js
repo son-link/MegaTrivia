@@ -42,13 +42,13 @@ function maxpuntuaciones(){
 }
 
 $("#puntuaciones").click(function() {
-	$('#game').empty();
-	$('#game').append('<div><ul class="nav nav-tabs nav-stacked span4 offset1" style="text-align: left"></ul></div>');
+
+	$('#maximas ul').empty();
 	puntuaciones = JSON.parse(window.localStorage.getItem("MegaTrivia"));
 	$.each(puntuaciones,function(i, item) {
-		$('#game .nav').append('<li><a>{0}<span class="badge badge-info" style="float: right">{1}</span></a></li>'.format(item.name, item.acertadas));
+		$('#maximas ul').append('<li><a>{0}<span class="badge pull-right">{1}</span></a></li>'.format(item.name, item.acertadas));
 	});
-	$('#game').append('<div class="span8" style="text-align: center"><a href="index.html" class="btn">Volver</a></div>');
+	$('#puntuacionesmaximas').modal();
 });
 
 $('#gameover').on('hidden', function () {
@@ -106,7 +106,7 @@ $(window).load(function(){
 		e.preventDefault();
 	});
 })
-$("#triviainfo .modal-footer").delegate('.btn','click',function() {
+$("#descripcion").delegate('a','click',function() {
 	$('#game').empty();
 	trivia_name = $(this).attr('data-name');
 	trivia_file = $(this).attr('data-trivia');
