@@ -38,10 +38,6 @@
 			margin: 0 auto !important;
 			float:none;
 		}
-
-		#footer {
-			position: absolute; bottom: 0; left:0px; margin: 0 auto; width: 100%;
-		}
 	</style>
 </head>
 
@@ -124,29 +120,6 @@
 			 <div class="modal-footer"></div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function showtrivials(data){
-			$('#trivia_selection').empty();
-			$.each(data.trivials, function(indice,valor) {
-				button = '<a href="#" class="btn btn-primary span2" data-title="{0}" data-content="{1}" data-file="{2}">{0}</a>'.format(valor['name'], valor['desc'], valor['file'])
-				$('#trivia_selection').append(button);
-			});
-			$('#trivials').modal();
-		}
-		$("#trivia_selection").delegate('a', 'click', function() {
-			$('#descripcion').empty();
-			$('#descripcion').text($(this).attr('data-content'));
-			$('#descripcion').append('<br /><a data-dismiss="modal" aria-hidden="true" data-name="{0}"data-trivia="{1}"><i class="icon-chevron-right"></i> Jugar</a>'.format($(this).attr('data-title'), $(this).attr('data-file')));
-		});
-		$("#jugar").click(function() {
-			$.ajax({
-				url: 'trivials.json',
-				dataType: 'json',
-				async: false,
-				success: showtrivials
-			});
-		});
-	</script>
 	<script src="js/trivia.js" type="text/javascript"></script>
 </body>
 </html>

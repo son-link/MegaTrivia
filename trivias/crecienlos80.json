@@ -4,7 +4,7 @@
 			"titulo":"¿Que grupo no se podía levantar en 1981?", "respuestas": ["Mecano", "Hombres G", "Alaska y los pegamoides", "Queen"]
 		},
 		{
-			"titulo":"¿Cual es el planeta natal de Alf?", "respuestas": ["Belmak", "Tatooine", "Tierra", "Marte"]
+			"titulo":"¿Cual es el planeta natal de Alf?", "respuestas": ["Melmak", "Tatooine", "Tierra", "Marte"]
 		},
 		{
 			"titulo":"Completa la frase: Luke, ...", "respuestas": ["yo soy tu padre", "prepárate para morir", "coge mi mano", "soy tu tío"]
@@ -100,13 +100,26 @@
 			"titulo":"¿En que año fue liberado Nelson Mandela de prisión tras 27 años?", "respuestas": ["1990", "1980", "1981", "1988"]
 		},
 		{
-			"titulo":"¿Que le brillaba a Transfer, el enemigo de Willy Fog en La Vuela al Mundo de Willy Fog?", "respuestas": ["Ojo izquierdo", "Ojo Derecho", "Dientes", "Nada"]
+			"titulo":"¿Que le brillaba a Transfer, el enemigo de Willy Fog en La Vuelta al Mundo de Willy Fog?", "respuestas": ["Ojo izquierdo", "Ojo Derecho", "Dientes", "Nada"]
 		},
 		{
 			"titulo":"¿Cual es el nombre del coche de los Cazafantasmas?", "respuestas": ["Ecto 1", "Casper", "Ghost", "Gozer"]
 		},
 		{
 			"titulo":"¿En que año se puso a la venta el famoso micro ordenador ZX Spectrum?", "respuestas": ["1981", "1982", "1985", "1989"]
+		},
+		{
+			"titulo":"¿Como se llamaba el programa que nos enseñaba ciencia de manera divertida?",
+			"respuestas": ["El mundo de Beckman", "El Hormiguero", "Ciencia divertida", "Erase una vez la ciencia"]
+		},
+		{
+			"titulo":"¿En que videojuego teníamos que hacer lineas con las piezas que caían?", "respuestas": ["Tetris", "Flipull", "Puzznic", "Mario bros."]
+		},
+		{
+			"titulo":"¿Como se llama al programa de televisión de los hermanos Mario?", "respuestas": ["Super Mario Bros. Super Show", "Capitan N", "El show de los hermanos Mario", "Universo Nintendo"]
+		},
+		{
+			"titulo":"Sigue la canción: Eran 1, 2, y 3", "respuestas": ["los famosos mosqueperros", "4, somos 4, 4 tipos, locos los 4", "aquí estamos con usted otra vez", "la gallina Turuleta a puesto 4, a puesto 5, a puesto 6"]
 		}
 	]
 }
