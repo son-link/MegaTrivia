@@ -128,7 +128,7 @@ $("#game").delegate('#questions a', 'click', function() {
 	if (idresp == '0'){
 		acertadas ++;
 		$(this).addClass('btn-success');
-		setTimeout(nueva_pregunta, 1000);
+		setTimeout(nueva_pregunta, 2000);
 	}else{
 		falladas ++;
 		nueva_pregunta();
