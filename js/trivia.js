@@ -1,150 +1,186 @@
-var acertadas = 0;
-var falladas = 0;
-var rand = new Array;
-var ids = [0,1,2,3];
-var actual = 0;
-var preguntas;
-var seconds = 10;
-var trivia_name;
-var trivia_file;
+let corrects = 0;
+let failed = 0;
+let ids = [0, 1, 2, 3];
+let current_question = 0;
+let questions;
+let seconds = 20;
+let trivials;
+let trivia_name;
+let trivia_file;
+let questions_timer = null;
+let block_answers = false;
+
+$().get('trivials.json', function(resp) {
+  trivials = resp.trivials;
+});
+
 // Esta función es la encargada de randomizar los arrays que le pasemos
 function shuffleArray(array) {
-	for (var i = array.length - 1; i > 0; i--) {
-		var j = Math.floor(Math.random() * (i + 1));
-		var temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
-	return array;
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array;
 }
-// Esta función se encarga de mostrar los trivials disponibles
-function showtrivials(data){
-	$('#trivia_selection').empty();
-	$.each(data.trivials, function(indice,valor) {
-		button = '<a href="#" class="btn btn-primary span2" data-title="{0}" data-content="{1}" data-file="{2}">{0}</a>'.format(valor['name'], valor['desc'], valor['file'])
-		$('#trivia_selection').append(button);
-	});
-	$('#trivials').modal();
-}
-// Cuando se pulsa sobre uno de los trivials se muestra la información y un link para empezar a jugarlo
-$("#trivia_selection").delegate('a', 'click', function() {
-	$('#descripcion').empty();
-	$('#descripcion').text($(this).attr('data-content'));
-	$('#descripcion').append('<br /><a data-dismiss="modal" aria-hidden="true" data-name="{0}"data-trivia="{1}"><i class="icon-chevron-right"></i> Jugar</a>'.format($(this).attr('data-title'), $(this).attr('data-file')));
+
+$('.show-page').on('click', function() {
+  $('.page').removeClass('active');
+  const target = $(this).attr('data-target');
+  $(`#${target}`).addClass('active');
+
+  switch (target) {
+    case 'trivials-list':
+      showtrivials();
+      break;
+    case 'top-ratings':
+      showRecords();
+      break;
+  
+    default:
+      break;
+  }
 });
-// al pulsar sobre el link para jugar a un trivial solicitamos los datos e invocamos a la función pertinente
-$("#jugar").click(function() {
-	$.ajax({
-		url: 'trivials.json',
-		dataType: 'json',
-		async: false,
-		success: showtrivials
-	});
+
+// Esta función se encarga de mostrar los trivials disponibles
+function showtrivials() {
+  $('#trivia_selection').empty();
+  trivials.forEach(function (trivia, i) {
+    const button = `<button class="btn-green trivia" data-trivia="${i}">${trivia.name}</button>`;
+    $('#trivia_selection').append(button);
+  });
+}
+
+// Cuando se pulsa sobre uno de los trivials se muestra la información y un link para empezar a jugarlo
+$('#trivia_selection').on('click', '.trivia', function(e) {
+  const trivia = parseInt($(e.target).attr('data-trivia'));
+  const data = trivials[trivia];
+
+  if (data) {
+    loadTrivia(data.file);
+    trivia_name = data.name
+    $('.page').removeClass('active');
+    $('#trivia').addClass('active');
+    corrects = 0;
+    failed = 0;
+    seconds = 20;
+    current_question = 0;
+  }
 });
 
 // Comprobamos si hay una nueva puntuación máxima de un trivial. Si no es así solo guarda la puntuación si se acertó al menos 3 preguntas
-function maxpuntuaciones(){
-	if (window.localStorage.getItem('MegaTrivia') == null && acertadas >= 3){
-		punt = [{"name": trivia_name, "acertadas": acertadas}];
-		window.localStorage.setItem('MegaTrivia', JSON.stringify(punt));
-		$('#gameover .modal-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
-	}else{
-		puntuaciones = JSON.parse(window.localStorage.getItem("MegaTrivia"));
-		result = $.grep(puntuaciones, function(e){ return e.name == trivia_name; });
-		if (result.length){
-			$.each(puntuaciones, function(i, item) {
-				if (item.name == trivia_name && item.acertadas < acertadas){
-					item.acertadas = acertadas;
-					$('#gameover .modal-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
-				}
-			});
-		}else{
-			$('#gameover .modal-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
-			puntuaciones.push({"name": trivia_name, "acertadas": acertadas});
-		}
-		window.localStorage.setItem("MegaTrivia", JSON.stringify(puntuaciones));
-	}
+function setMaxScores() {
+  if (window.localStorage.getItem('MegaTrivia') == null && corrects >= 3){
+    punt = [{
+      name: trivia_name,
+      corrects: corrects
+    }];
+    
+    window.localStorage.setItem('MegaTrivia', JSON.stringify(punt));
+    $('#gameover .modal-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
+  } else {
+    const scores = JSON.parse(window.localStorage.getItem("MegaTrivia"));
+    result = scores.filter((data) => {
+      return (data.name == trivia_name)
+    });
+
+    if (result.length) {
+      scores.forEach(function(item) {
+        if (item.name == trivia_name && item.corrects < corrects){
+          item.corrects = corrects;
+          $('#gameover .page-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
+        }
+      });
+    } else {
+      $('#gameover .page-body').append('<br /><b>Ha obtenido un nuevo récord</b>');
+      scores.push({"name": trivia_name, "corrects": corrects});
+    }
+
+    window.localStorage.setItem("MegaTrivia", JSON.stringify(scores));
+  }
 }
 
 // Muestra las puntuaciones máximas
-$("#puntuaciones").click(function() {
-
-	$('#maximas ul').empty();
-	puntuaciones = JSON.parse(window.localStorage.getItem("MegaTrivia"));
-	if (puntuaciones != null){
-		$.each(puntuaciones,function(i, item) {
-			$('#maximas ul').append('<li><a>{0}<span class="badge pull-right">{1}</span></a></li>'.format(item.name, item.acertadas));
-		});
-	}else{
-		$('#maximas').text('Aun no hay ninguna puntuación guardada');
-	}
-	$('#puntuacionesmaximas').modal();
-});
-
-$('#gameover').on('hidden', function () {
-	window.location.href = "index.html";
-});
-
-// Esta función es invocada cada vez que se vaya a hacer una nueva pregunta
-function nueva_pregunta(){
-	if (actual <= preguntas.length-1 && falladas < 3){
-		$('#game').empty();
-		ids = shuffleArray(ids);
-		var item = preguntas[actual];
-		$("#game").append('<p>'+item.titulo+'<p><div class="btn-group btn-group-vertical" id="questions"></div>');
-		for (var i=0; i<item.respuestas.length; i++){
-			li_str = '<a href="#" class="btn" idresp="'+ids[i]+'">'+item.respuestas[ids[i]]+'</a>';
-			$("#game #questions").append(li_str);
-		}
-		actual++;
-	}else{
-		$("#gameover #acertadas").text(acertadas);
-		$("#gameover #falladas").text(falladas);
-		$('#gameover').modal('show');
-		maxpuntuaciones();
-	}
+function showRecords() {
+  $('#best-scores > tbody').empty();
+  scores = JSON.parse(window.localStorage.getItem("MegaTrivia"));
+  if (scores != null) {
+    scores.forEach(function(item) {
+      $('#best-scores > tbody').append(`<tr><td>${item.name}</td><td>${item.corrects}</td></tr>`);
+    });
+  } else {
+    $('#best-scores > tbody').html('<tr><td colspan="2">Aun no hay ninguna puntuación guardada</td></tr>');
+  }
 }
 
-function callback(data){
-	preguntas = shuffleArray(data.preguntas);
-	nueva_pregunta();
+// Esta función es invocada cada vez que se vaya a hacer una nueva pregunta
+function newQuestion() {
+  block_answers = false;
+  if (current_question <= questions.length - 1 && failed < 3) {
+    seconds = 20;
+    $('#cur-time').text(seconds);
+    $('#trivia-answers').empty();
+    ids = shuffleArray(ids);
+    var item = questions[current_question];
+    $('#trivia-question').html(item.title);
+
+    for (let i = 0; i < 4; i++) {
+      li_str = `<button class="btn-blue question" idresp="${ids[i]}">${item.answers[ids[i]]}</button>`;
+      $('#trivia-answers').append(li_str);
+    }
+
+    current_question++;
+    $('#cur-question > span').text(current_question);
+    $('#acer-total').text(`${corrects} / ${questions.length}`);
+
+    if (questions_timer) clearInterval(questions_timer);
+
+    questions_timer = setInterval( function () {
+      seconds--;
+      $('#cur-time').text(seconds);
+
+      if (seconds == 0) {
+        $('#cur-time').text(0);
+        clearInterval(questions_timer);
+        failed++;
+        newQuestion();
+      }
+    }, 1000);
+  } else {
+    clearInterval(questions_timer);
+    $('#total-correct').text(`${corrects}`);
+    $('#total-failed').text(`${failed}`);
+    $('.page').removeClass('active');
+    $('#gameover').addClass('active');
+    setMaxScores()
+  }
 }
 
 // Esta función carga el trivial solicitado
 function loadTrivia(file) {
-	var file = file;
-
-	$.ajax({
-		url: 'trivias/'+file+'.json',
-		dataType: 'json',
-		async: false,
-		success: callback
-	});
+  $().get('trivias/'+file+'.json', function(res) {
+    questions = shuffleArray(res.questions);
+    newQuestion();
+  });
 }
 
 // Comprobamos si se escogió la respuesta correcta o no
-$("#game").delegate('#questions a', 'click', function() {
-	var idresp = $(this).attr('idresp');
-	if (idresp == '0'){
-		acertadas ++;
-		$(this).addClass('btn-success');
-		setTimeout(nueva_pregunta, 1000);
-	}else{
-		falladas ++;
-		nueva_pregunta();
-	}
-});
+$('#trivia').on('click', '.question', function() {
+  if (block_answers) return;
 
-$(window).load(function(){
-	$('#mainlist li').on('click', function(e) {
-		e.preventDefault();
-	});
-});
+  const idresp = $(this).attr('idresp');
+  $(this).removeClass('btn-blue');
 
-// Cuando se pulsa sobre el link para jugar esta función guarda el nombre del trivial e invoca a la función encargada de solicitar el fichero con las preguntas
-$("#descripcion").delegate('a','click',function() {
-	$('#game').empty();
-	trivia_name = $(this).attr('data-name');
-	trivia_file = $(this).attr('data-trivia');
-	loadTrivia(trivia_file);
+  if (idresp == '0') {
+    corrects++;
+    $(this).addClass('btn-green');
+  } else {
+    failed++;
+    $(this).addClass('btn-red');
+  }
+
+  block_answers = true;
+  setTimeout(newQuestion, 1000);
 });
