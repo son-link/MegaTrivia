@@ -26,7 +26,7 @@ class Translate {
 
       request.send();
     } else {
-      fetch(`/i18n/${this.lang}.json`)
+      fetch(`i18n/${this.lang}.json`)
         .then((res) => res.json())
         .then((translation) => {
           this.translation = translation;
