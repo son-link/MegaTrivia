@@ -1,0 +1,18 @@
+{
+    "about": "About",
+    "about_html": "<p>MegaTrivia is a trivia game where you can choose between different trivia games, both created by me and contributed by other people.</p><p>The code for this project is licensed under GNU/GPL version 3 or newer.</p><a href='https://github.com/son-link/MegaTrivia' class='btn btn-green'>Source code</a><p>MegaTrivia &copy; 2013 - 2022 Alfonso Saavedra \"Son Link\".</p>",
+    "back": "Back",
+    "game_over": "You got {total_correct} question(s) right and {total_failed} wrong.",
+    "lang": "Language",
+    "new_record": "You have a new record",
+    "no_records": "There are no saved scores yet",
+    "options": "Options",
+    "play": "Play",
+    "points": "Points",
+    "question-n": "Question {cur_question}",
+    "records": "Records",
+    "save": "Save",
+    "select-trivia": "Select a trivia",
+    "time": "Time",
+    "trivia": "Trivia"
+}

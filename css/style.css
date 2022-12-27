@@ -144,6 +144,10 @@ button,
   margin-bottom: .5rem;
 }
 
+.trivia > img {
+  height: 1rem;
+}
+
 #trivia-question {
   position: relative;
   background-color: var(--blue);
@@ -228,11 +232,35 @@ button,
   margin: auto;
   text-align: left;
   margin: 1rem auto;
+  border-collapse: collapse;
 }
 
-#best-scores td:last-of-type,
-#best-scores th:last-of-type  {
+#best-scores .score-points,
+#best-scores .score-points {
   width: 4rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option > label {
+  width: 8rem;
+  text-align: left;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.option select {
+  padding-right: 1.5rem;
+  text-align: left;
+  appearance: none;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iI0ZGRkZGRiIgY2xhc3M9InctNSBoLTUiPgoJPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNS4yMyA3LjIxYS43NS43NSAwIDAxMS4wNi4wMkwxMCAxMS4xNjhsMy43MS0zLjkzOGEuNzUuNzUgMCAxMTEuMDggMS4wNGwtNC4yNSA0LjVhLjc1Ljc1IDAgMDEtMS4wOCAwbC00LjI1LTQuNWEuNzUuNzUgMCAwMS4wMi0xLjA2eiIgY2xpcC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4gIA==);
+  background-size: 1.5rem;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {

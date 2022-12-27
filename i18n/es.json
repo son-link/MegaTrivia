@@ -1,0 +1,18 @@
+{
+	"about": "Sobre",
+	"about_html": "<p>MegaTrivia es un juego tipo trivial donde podrás escoger entre distintos triviales, tanto creados por mi como aportados por otras personas.</p><p>El código de este proyecto esta bajo licencia GNU/GPL en su versión 3 o más nueva.</p><a href='https://github.com/son-link/MegaTrivia' class='btn btn-green'>Código fuente</a><p>MegaTrivia &copy; 2013 - 2022 Alfonso Saavedra \"Son Link\".</p>",
+	"back": "Volver",
+	"game_over": "Has acertado {total_correct} pregunta(s) y fallado {total_failed}.",
+	"lang": "Idioma",
+	"new_record": "Tienes un nuevo record",
+	"no_records": "Aun no hay ninguna puntuación guardada",
+	"options": "Opciones",
+	"play": "Jugar",
+	"points": "Puntos",
+	"question-n": "Pregunta {cur_question}",
+	"records": "Puntuaciones",
+	"save": "Guardar",
+	"select-trivia": "Selecciona un trivial",
+	"time": "Tiempo",
+	"trivia": "Trivial"
+}
