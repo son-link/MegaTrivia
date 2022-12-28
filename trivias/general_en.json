@@ -1,0 +1,454 @@
+{
+    "questions": [
+        {
+            "title": "Which country administers South Georgia, a last stop before Antarctica?",
+            "answers": [
+                "The UK",
+                "The USA",
+                "Argentina",
+                "France"
+            ]
+        },
+        {
+            "title": "In which organ is your \"hypothalmus\" located?",
+            "answers": [
+                "Brain",
+                "Lungs",
+                "Heart",
+                "Liver"
+            ]
+        },
+        {
+            "title": "What were the first names of US presidents Madison, Monroe, Polk, and Garfield?",
+            "answers": [
+                "James",
+                "Marshall",
+                "Theodore",
+                "Thomas"
+            ]
+        },
+        {
+            "title": "Name the movie that matches the following plot summary: 'The son of a city's mastermind falls in love with a working-class prophet.'",
+            "answers": [
+                "Metropolis",
+                "The Lord of the Rings: The Fellowship of the Ring",
+                "The Lives of Others",
+                "The Departed"
+            ]
+        },
+        {
+            "title": "Which type of animal are the Sea Wasp and Cubozoa?",
+            "answers": [
+                "Jellyfish",
+                "Squid",
+                "Shark",
+                "Whale"
+            ]
+        },
+        {
+            "title": "Which band includes 'Paul McCartney'?",
+            "answers": [
+                "Wings",
+                "Level 42",
+                "Deep Purple",
+                "The Chemical Brothers"
+            ]
+        },
+        {
+            "title": "Deoxyribonucleic acid is better known as what?",
+            "answers": [
+                "DNA",
+                "RNA",
+                "DRA",
+                "DA"
+            ]
+        },
+        {
+            "title": "What is the nickname of the English football team Wolverhampton Wanderers?",
+            "answers": [
+                "Wolves",
+                "Cottagers",
+                "The Cherries",
+                "The Boro"
+            ]
+        },
+        {
+            "title": "In Which Disney Movie Were There Characters Called \"John, Paul, George & Ringo\"?",
+            "answers": [
+                "The Jungle Book",
+                "The Beatle Boot",
+                "The Lion King",
+                "The Little Mermaid"
+            ]
+        },
+        {
+            "title": "Who was assassinated on Dec. 8, 1980 in New York City? ",
+            "answers": [
+                "John Lennon ",
+                "Malcolm X",
+                "John F Kennedy",
+                "Martin Luther King"
+            ]
+        },
+        {
+            "title": "Taipei is the capital city of which country?",
+            "answers": [
+                "Taiwan",
+                "New Zealand",
+                "Kosovo",
+                "Timor-Leste"
+            ]
+        },
+        {
+            "title": "Which spirit is fermented and distilled from sugar cane?",
+            "answers": [
+                "Rum ",
+                "Vodka",
+                "Whiskey",
+                "Brandy"
+            ]
+        },
+        {
+            "title": "With which sport is John McEnroe associated?",
+            "answers": [
+                "Tennis",
+                "Snooker",
+                "Hockey",
+                "Cycling"
+            ]
+        },
+        {
+            "title": "In the song \"The Twelve Days Of Christmas\", what did my true love give to me on the 12th day?",
+            "answers": [
+                "12 Drummers Drumming",
+                "12 Lords a Leaping",
+                "12 Maids a Milking",
+                "12 Swans a Swimming"
+            ]
+        },
+        {
+            "title": "Which of these dishes would you most expect to find in Ghana?",
+            "answers": [
+                "Fufu",
+                "Dim Sum",
+                "Ema Datshi",
+                "Kushari"
+            ]
+        },
+        {
+            "title": "Bogotá is the capital city of which country?",
+            "answers": [
+                "Colombia",
+                "Libya",
+                "Eritrea",
+                "El Salvador"
+            ]
+        },
+        {
+            "title": "Who killed Macbeth?",
+            "answers": [
+                "Macduff",
+                "Macburn",
+                "Lady Macbeth",
+                "Duncan"
+            ]
+        },
+        {
+            "title": "Which actress played the role of Ellen Ripley in Alien?",
+            "answers": [
+                "Sigourney Weaver",
+                "Anne Bancroft",
+                "Angela Lansbury",
+                "Katharine Hepburn"
+            ]
+        },
+        {
+            "title": "What colour is Santa Claus's belt?",
+            "answers": [
+                "Black",
+                "White",
+                "Red",
+                "Brown"
+            ]
+        },
+        {
+            "title": "What does the flag of Finland look like?",
+            "answers": [
+                "White with a blue cross extending to the edges.",
+                "Red with five yellow stars in the top left.",
+                "White with a red and blue yin yang symbol in the center.",
+                "Three equal vertical bands of green white and green."
+            ]
+        },
+        {
+            "title": "Name the capital of Argentina.",
+            "answers": [
+                "Buenos Aires ",
+                "Sao Paolo",
+                "Mendoza",
+                "Cordoba"
+            ]
+        },
+        {
+            "title": "In what type of building did Plato and Aristotle teach?",
+            "answers": [
+                "Gymnasium",
+                "Sauna",
+                "Auditorium",
+                "Cafeteria"
+            ]
+        },
+        {
+            "title": "Which singer released the song 'Russian Roulette'?",
+            "answers": [
+                "Rihanna",
+                "Drake",
+                "Nicki Minaj",
+                "Ricky Martin"
+            ]
+        },
+        {
+            "title": "What is Grammatology the study of?",
+            "answers": [
+                "writing systems",
+                "the field of dermatological anatomical pathology",
+                "the atmosphere",
+                "existence"
+            ]
+        },
+        {
+            "title": "From which plant is Rum made?",
+            "answers": [
+                "Sugar Cane",
+                "Banana Tree",
+                "Tobacco",
+                "Palm Tree"
+            ]
+        },
+        {
+            "title": "What's heaven to fallen Norse warriors?",
+            "answers": [
+                "Valhalla",
+                "Trondheim",
+                "Odinsbahn",
+                "Asgard"
+            ]
+        },
+        {
+            "title": "In which country is gin a popular drink?",
+            "answers": [
+                "England",
+                "Norway",
+                "Thailand",
+                "Mexico"
+            ]
+        },
+        {
+            "title": "What is the capital of Ireland?",
+            "answers": [
+                "Dublin",
+                "Cork",
+                "Limerick",
+                "Galway"
+            ]
+        },
+        {
+            "title": "Prior to 1935 what was Iran known as?",
+            "answers": [
+                "Persia ",
+                "Parthia",
+                "Mesopotamia",
+                "Assyria"
+            ]
+        },
+        {
+            "title": "Which Bird Is Resident Of The American Southwest & Has Been Immortilized In A Cartoon Series?",
+            "answers": [
+                "Roadrunner",
+                "Emu",
+                "Bald Eagle",
+                "Canary"
+            ]
+        },
+        {
+            "title": "What is the sixth planet from our sun?",
+            "answers": [
+                "Saturn",
+                "Neptune",
+                "Jupiter",
+                "Venus"
+            ]
+        },
+        {
+            "title": "Which word is defined as 'nonsense'?",
+            "answers": [
+                "Poppycock",
+                "Dipthong",
+                "Ragamuffin",
+                "Quomodocunquizing"
+            ]
+        },
+        {
+            "title": "What is the capital city of Hungary?",
+            "answers": [
+                "Budapest",
+                "Majuro",
+                "Reykjavik",
+                "Vaduz"
+            ]
+        },
+        {
+            "title": "What is the capital city of North Korea?",
+            "answers": [
+                "Pyongyang",
+                "Bangui",
+                "Ouagadougou",
+                "Thimphu"
+            ]
+        },
+        {
+            "title": "What name is given to the Japanese dish in which fish, shellfish, or vegetables are fried in batter?",
+            "answers": [
+                "Tempura ",
+                "Bento",
+                "Sashimi",
+                "Nori"
+            ]
+        },
+        {
+            "title": "Name the movie that matches the following plot summary: 'A mafia enforcer and a casino executive compete against each other over a gambling empire.'",
+            "answers": [
+                "Casino",
+                "Parasite",
+                "Eternal Sunshine of the Spotless Mind",
+                "The Godfather"
+            ]
+        },
+        {
+            "title": "What is the name for a hot spring that shoots steam into the air?",
+            "answers": [
+                "Geyser",
+                "Volcano",
+                "Jetsam",
+                "Geotherm"
+            ]
+        },
+        {
+            "title": "Which American band released the song 'Boom Boom Pow'?",
+            "answers": [
+                "Black Eyed Peas",
+                "MercyMe",
+                "Three 6 Mafia",
+                "The Velvet Underground"
+            ]
+        },
+        {
+            "title": "What is Astrogeology the study of?",
+            "answers": [
+                "geology of celestial bodies",
+                "prehistoric environments by analyzing fossils and rock strata",
+                "museum management",
+                "bones"
+            ]
+        },
+        {
+            "title": "In the 15th century, what was the war between the houses of Lancaster and York?",
+            "answers": [
+                "War of the Roses",
+                "The House War",
+                "The Game of Thrones",
+                "The Happy War"
+            ]
+        },
+        {
+            "title": "Bradley Cooper plays the role of which character in the Marvel Cinematic Unvierse?",
+            "answers": [
+                "Rocket Raccoon",
+                "Dr. Bruce Banner",
+                "Ned Leeds",
+                "Drax the Destroyer"
+            ]
+        },
+        {
+            "title": "Which actor from the Harry Potter films also starred as Dracula in the 1992 adaptation?",
+            "answers": [
+                "Gary Oldman",
+                "Daniel Radcliffe",
+                "Alan Rickman",
+                "Michael Gambon"
+            ]
+        },
+        {
+            "title": "Which film contains the character 'Mrs. Robinson'?",
+            "answers": [
+                "The Graduate",
+                "Mad Max",
+                "One Flew Over the Cuckoo's Nest",
+                "The Night of the Hunter"
+            ]
+        },
+        {
+            "title": "What is the plot of the movie The Godfather?",
+            "answers": [
+                "A New York City mob boss transfers control of his empire to his reluctant son.",
+                "A leader tries to expand his empire while a poor barber tries to avoid persecution.",
+                "A gang leader is imprisoned and volunteers for a conduct-aversion experiment.",
+                "After his father goes missing, a professor finds himself in a search for the Holy Grail."
+            ]
+        },
+        {
+            "title": "How many faces does a dodecahedron have?",
+            "answers": [
+                "12",
+                "4",
+                "10",
+                "8"
+            ]
+        },
+        {
+            "title": "Where in the world is 'Rock English' spoken?",
+            "answers": [
+                "Gibraltar ",
+                "Jamaica",
+                "New Zealand",
+                "Scotland"
+            ]
+        },
+        {
+            "title": "In which year were the 9/11 attacks?",
+            "answers": [
+                "2001",
+                "1993",
+                "1997",
+                "2005"
+            ]
+        },
+        {
+            "title": "Which author wrote 'The Silmarillion'?",
+            "answers": [
+                "J. R. R. Tolkien",
+                "G. K. Chesterton",
+                "Philip Pullman",
+                "C. S. Lewis"
+            ]
+        },
+        {
+            "title": "What is the capital city of Belgium?",
+            "answers": [
+                "Brussels",
+                "Luanda",
+                "Ottawa",
+                "Warsaw"
+            ]
+        },
+        {
+            "title": "What is the name of the syrup drained from raw sugar?",
+            "answers": [
+                "Molasses",
+                "Pursy",
+                "Nectar",
+                "Crystallis"
+            ]
+        }
+    ]
+}

@@ -11,6 +11,12 @@
             "file": "nintendo",
             "desc": "Preguntas sobre la historia de Nintendo",
             "lang": "es"
+        },
+        {
+            "name": "General",
+            "file": "general_en",
+            "desc": "A little bit of everything",
+            "lang": "en"
         }
     ]
 }
