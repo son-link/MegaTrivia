@@ -6,7 +6,7 @@
     "theme_color": "#233142",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "/MegaTrivia",
     "icons": [
         {
             "src": "favicon.svg",
