@@ -1,0 +1,24 @@
+{
+    "short_name": "MegaTrivia",
+    "name": "MegaTrivia",
+    "lang": "en",
+    "background_color": "#233142",
+    "theme_color": "#233142",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "48x48 72x72 96x96 114x144 128x128 256x256 512x512",
+    		"type": "image/svg+xml",
+			"purpose": "any"
+        },
+		{
+            "src": "splash.png",
+            "sizes": "512x512",
+    		"type": "image/png"
+        }
+    ],
+    "prefer_related_applications": false
+}
