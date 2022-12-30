@@ -7,6 +7,7 @@
     "new_record": "You have a new record",
     "no_records": "There are no saved scores yet",
     "options": "Options",
+    "only_in_lang": "Show only trivia in the selected language",
     "play": "Play",
     "points": "Points",
     "question-n": "Question {cur_question}",

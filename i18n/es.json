@@ -7,6 +7,7 @@
 	"new_record": "Tienes un nuevo record",
 	"no_records": "Aun no hay ninguna puntuación guardada",
 	"options": "Opciones",
+	"only_in_lang": "Mostrar solo los trivial en el idioma seleccionado",
 	"play": "Jugar",
 	"points": "Puntos",
 	"question-n": "Pregunta {cur_question}",

@@ -22,7 +22,8 @@ if (nav_lang == 'ca' || nav_lang == 'eu' || nav_lang == 'gl')
 if (localStorage.getItem('MegaTriviaConf') == null) {
   options = {
     lang: (langs_supported.includes(nav_lang)) ? nav_lang : 'en',
-    time: 20
+    time: 20,
+    only_in_lang: false
   }
 
   localStorage.setItem('MegaTriviaConf', JSON.stringify(options));
@@ -73,8 +74,14 @@ $('.show-page').on('click', function() {
 function showtrivials() {
   $('#trivia_selection').empty();
   trivials.forEach(function (trivia, i) {
-    const button = `<button class="btn-green trivia" data-trivia="${i}"><img src="flags/${trivia.lang}.svg" /> ${trivia.name}</button>`;
-    $('#trivia_selection').append(button);
+    if ((options.only_in_lang && trivia.lang == options.lang) || !options.only_in_lang) {
+      const button = `
+        <button class="btn-green trivia" data-trivia="${i}">
+          <img src="flags/${trivia.lang}.svg" /> ${trivia.name}
+        </button>
+      `;
+      $('#trivia_selection').append(button);
+    }
   });
 }
 
@@ -213,18 +220,22 @@ $('#trivia').on('click', '.question', function() {
 function loadConf() {
   $('#sel-lang').val(options.lang);
   $(`#sel-lang > option`).removeAttr('selected');
-  $(`#sel-lang > option[value=${options.lang}]`).attr('selected', true);
+  $(`#sel-lang > option[value="${options.lang}]"`).attr('selected', true);
   $(`#sel-time > option`).removeAttr('selected');
-  $(`#sel-time > option[value=${options.time}]`).attr('selected', true);
+  $(`#sel-time > option[value="${options.time}"]`).attr('selected', true);
+  $(`#in-lang`).removeAttr('checked');
+  if (options.only_in_lang) $(`#in-lang`).attr('checked', true);
 }
 
 $('#save-options').on('click', function() {
   const lang = $('#sel-lang').val();
   const time = $('#sel-time').val();
+  const only_in_lang = ($('#in-lang').is(':checked')) ? true : false;
 
   translate.changeLang(lang);
   options.lang = lang;
   options.time = time;
+  options.only_in_lang = only_in_lang;
 
   localStorage.setItem('MegaTriviaConf', JSON.stringify(options));
 });
