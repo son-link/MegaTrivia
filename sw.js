@@ -12,7 +12,9 @@ const CACHE_LIST = [
 	"/i18n/es.json",
 	"/trivias/crecienlos80.json",
 	"/trivias/general_en.json",
-	"/trivias/nintendo.json"
+	"/trivias/nintendo.json",
+    "/flags/en.svg",
+    "/flags/es.svg"
 ];
 const STATIC_CACHE_VERSION = `static-v1-${new Date().getTime()}`
 
