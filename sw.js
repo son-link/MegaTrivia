@@ -16,7 +16,7 @@ const CACHE_LIST = [
   "/flags/en.svg",
   "/flags/es.svg"
 ];
-const STATIC_CACHE_VERSION = `static-v1-221230200000`;
+const STATIC_CACHE_VERSION = `static-v1-23070100000`;
 const DEBUG = false;
 
 self.addEventListener('install', function(event) {
