@@ -295,6 +295,19 @@ button,
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzQ3Qzc0NyI+PHBhdGggZD0iTTEwLDE3TDUsMTJMNi40MSwxMC41OEwxMCwxNC4xN0wxNy41OSw2LjU4TDE5LDhNMTksM0g1QzMuODksMyAzLDMuODkgMyw1VjE5QTIsMiAwIDAsMCA1LDIxSDE5QTIsMiAwIDAsMCAyMSwxOVY1QzIxLDMuODkgMjAuMSwzIDE5LDNaIiAvPjwvc3ZnPg==)
 }
 
+#back2home {
+  display: inline-block;
+  content: ' ';
+  width: 24px;
+  height: 2.5rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEwLDIwVjE0SDE0VjIwSDE5VjEySDIyTDEyLDNMMiwxMkg1VjIwSDEwWiIgLz48L3N2Zz4K);
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin-left: .5rem;
+}
+
 @media (max-width: 767px) {
   button,
   .btn,

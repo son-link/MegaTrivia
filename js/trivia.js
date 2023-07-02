@@ -240,6 +240,12 @@ $('#save-options').on('click', function() {
   localStorage.setItem('MegaTriviaConf', JSON.stringify(options));
 });
 
+$('#back2home').on('click', () => {
+  clearInterval(questions_timer);
+  $('.page').removeClass('active');
+  $('#main').addClass('active');
+})
+
 window.onload = () => {
   if ('serviceWorker' in navigator) {
     const onSuccessRegister = (registration) => console.log("SW Register Success: ", registration.scope)
